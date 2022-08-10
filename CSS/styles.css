@@ -3,10 +3,13 @@
     width: 100%;
     margin: 0 auto;
     height: 100vh;
+    background-color: #F2F5F8;
 }
 header {
     width: 100%;
     height: 130px;
+    margin-bottom: 44px;
+    background-color: white;
 }
 .header-1 {
     width: 100%;
@@ -55,9 +58,11 @@ header {
 }
 .header-2 {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
+    margin-left: 41px;
+    margin-right: 41px;
 }
 .header-2 h1, span {
     font-size: 31px;
@@ -107,4 +112,74 @@ input {
     border-radius: 8px;
     top: 1px;
     right: 1px;
+}
+#section-1 {
+    display: flex;
+    width: 60%;
+    gap: 16px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.left-cont {
+    width: 742px;
+    height: 471px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.left-cont img {
+    width: 95%;
+    height: 230px;
+    margin: 18px auto;
+}
+.left-cont p{
+    margin-left: 20px;
+    width: 80%;
+}
+.Barclays {
+    font-size: 24px;
+    color: #133B3A
+}
+#circles {
+    width: 52px;
+    height: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+.circle-1 {
+    width: 12px;
+    height: 12px;
+    background-color: #8172D5;
+    border-radius: 50%;
+}
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #8172D5;
+}
+.left h1, .right h1 {
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+.right-cont {
+    width: 330px;
+    height: 471px;
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 50px;
+}
+#row-1, #row-2, #row-3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.direction-arrows {
+    width: 7.66px;
+    height: 13.31px;
 }
