@@ -300,10 +300,42 @@ input {
     height: 400px;
     padding-left: 68px;
 }
-button {
+.event-cont button {
     width: 110px;
     height: 35px;
     background-color: #758BFD;
     color: white;
     border: none;
+}
+#section-5 {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 196px;
+    display: flex;
+}
+#section-5 div {
+    width: 50%;
+}
+#section-5 div button {
+    width: 130px;
+    height: 35px;
+    background-color: #758BFD;
+    color: white;
+    border: none;
+    margin-right: 15px;
+}
+#section-5 div img {
+    margin-top: 14px;
+}
+#section-5 div div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#name-surname {
+    color: #8172D5;
+    font-size: 18px;
+}
+.content-man {
+    flex-direction: column;
 }
