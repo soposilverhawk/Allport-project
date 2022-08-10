@@ -339,3 +339,25 @@ input {
 .content-man {
     flex-direction: column;
 }
+#section-6 {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 52px;
+}
+#section-6 h1 {
+    font-size: 18px;
+}
+#contacts-cont {
+    width: 100%;
+    height: 409px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#contacts-cont div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
