@@ -145,8 +145,23 @@ input {
     font-size: 24px;
     color: #133B3A
 }
+#circles-and-arrows {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#slider-arrows {
+    width: 10%;
+    margin-right: 28px;
+    display: flex;
+}
+#slider-arrow-right, #slider-arrow-left {
+    width: 10.66px;
+    height: 16.31px;
+}
 #circles {
-    width: 52px;
+    width: 10%;
     height: 12px;
     display: flex;
     justify-content: space-between;
