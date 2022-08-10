@@ -231,3 +231,26 @@ input {
 .date {
     margin-top: 44px;
 }
+#section-3 {
+    margin-top: 81px;
+    width: 80%;
+    margin: 0 auto;
+}
+#FAQ-cont {
+    width: 100%;
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+#FAQ-cont div {
+    width: 50%;
+    height: 82px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:rgb(58, 58, 151);
+    padding-left: 20px;
+    padding-right: 20px;
+}
