@@ -131,7 +131,6 @@ let dropDown1Arrow = document.querySelector(".drop-down-1");
 let dropDownMenu1 = document.querySelector(".lang-drop-down")
 dropDown1Arrow.addEventListener("click", function(){
     dropDownMenu1.classList.toggle("display")
-    console.log("hello")
 })
 
 let FAQtxt = [
@@ -154,6 +153,14 @@ let FAQtxt = [
         txt3: "Nam nisi maxime vero maiores sunt voluptatum quisquam veniam voluptatum quisquam veniam"
     }
 ]
+
+let registerButton = document.querySelector(".event-cont button");
+let registerDiv = document.querySelector(".register-div")
+let backButton = document.querySelector("#back")
+registerButton.addEventListener("click", function(){
+    registerButton.classList.toggle("register-disappear");
+    registerDiv.classList.toggle("register-form-appear");
+})
 
 let FAQDropDowns = document.querySelectorAll("#FAQ-cont div img");
 let FAQDiv = document.querySelectorAll("#FAQ-cont div");
