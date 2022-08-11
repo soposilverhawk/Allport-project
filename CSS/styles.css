@@ -33,7 +33,7 @@ header {
     width: 15px;
     height: 10.44px;
 }
-.language p {
+.language p, .lang-drop-down p {
     font-size: 12px;
     color: #758BFD;
 }
@@ -55,8 +55,9 @@ header {
 .header-2 ul {
     display: flex;
     width: 650px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     color: #8172D5;
+    align-items: center;
 }
 .header-2 {
     display: flex;
@@ -65,6 +66,7 @@ header {
     height: 100%;
     margin-left: 41px;
     margin-right: 41px;
+    position: relative;
 }
 .header-2 h1, span {
     font-size: 31px;
@@ -105,6 +107,10 @@ input {
     right: 13px;
     width: 11.75px;
     height: 11.75px;
+    transition: all 2s;
+}
+#search-bar {
+    transition: all 2s;
 }
 #search-background {
     position: absolute;
@@ -114,6 +120,7 @@ input {
     border-radius: 8px;
     top: 1px;
     right: 1px;
+    transition: all 2s;
 }
 #section-1 {
     display: flex;
@@ -122,6 +129,7 @@ input {
     margin: 0 auto;
     justify-content: space-between;
 }
+
 .left-cont {
     width: 850px;
     height: 550px;
@@ -131,6 +139,7 @@ input {
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 10px;
+    position: relative;
 }
 .left-cont img {
     width: 95%;
@@ -268,6 +277,8 @@ input {
     color:rgb(58, 58, 151);
     padding-left: 20px;
     padding-right: 20px;
+    flex-wrap: wrap;
+    transition: all 1s;
 }
 #section-4 {
     width: 100%;
@@ -374,8 +385,10 @@ input {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+    transition: all 1s;
 }
 footer {
     margin-top: 50px;
@@ -424,4 +437,59 @@ footer {
     width: 50%;
     margin-right: 40px;
     justify-content: space-between;
+}
+
+.active {
+    width: 0%;
+}
+.active-img {
+    right: 200px;
+}
+.green {
+    font-size: 12px;
+    color: #69A3A2;
+}
+.menu-2 {
+    background-color: white;
+    color: #8172D5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 10px;
+    position: absolute;
+    height: 80px;
+    width: 100px;
+}
+.menu-3 {
+    background-color: white;
+    color: #8172D5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 5px;
+    position: absolute;
+    height: 80px;
+    width: 120px;
+}
+#Georgia-img, #russia-img{
+    width: 15px;
+    height: 10px
+}
+.lang-drop-down {
+    width: 80px;
+    height: 48px;
+    background-color: white;
+    margin: -10px 34px;
+    position: absolute;
+    padding-left: 5px;
+    display: none;
+}
+.lang-drop-down div {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    padding-top: 10px;
+}
+.display {
+    display: block;
 }

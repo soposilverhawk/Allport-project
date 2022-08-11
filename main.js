@@ -49,9 +49,8 @@ let data = [
 
     },
 ]
-
 let cardsCont = document.querySelector("#cards-cont")
-for (i = 0; i < data.length; i++){
+for (i = 0; i < data.length; i++) {
     let section2Cards = document.createElement("div");
     section2Cards.classList.add("card-boxes")
     cardsCont.appendChild(section2Cards)
@@ -67,4 +66,132 @@ for (i = 0; i < data.length; i++){
     section2Cards.appendChild(date);
     date.innerHTML = data[i].txt2;
     date.classList.add('date')
+}
+
+let search = document.querySelector("#search-icon");
+let searchBar = document.querySelector("#search-bar")
+let searchBckgrnd = document.getElementById("search-background")
+search.addEventListener("click", function () {
+    searchBar.classList.toggle("active")
+    search.classList.toggle("active-img")
+    searchBckgrnd.classList.toggle("active-img")
+})
+
+let navLi = document.querySelectorAll(".header-2 ul li")
+let navLiSelect = document.querySelector(".header-2 ul li select")
+for (let i = 0; i < navLi.length; i++) {
+    navLi[i].addEventListener("mouseover", function () {
+        navLi[i].style.color = "red"
+    })
+    navLi[i].addEventListener("mouseout", function () {
+        navLi[i].style.color = "#8172D5";
+    })
+}
+
+let dropDown2 = document.querySelector(".drop-down-2");
+let jobTools = document.querySelector("#job-tools")
+dropDown2.addEventListener("click", function(){
+    let selectMenu = document.createElement("div");
+    jobTools.appendChild(selectMenu);
+    selectMenu.classList.add("menu-2")
+    let item1 = document.createElement("p")
+    item1.innerHTML = "Tool 1";
+    selectMenu.appendChild(item1)
+    let item2 = document.createElement("p")
+    item2.innerHTML = "Tool 2";
+    selectMenu.appendChild(item2)
+    let item3 = document.createElement("p")
+    item3.innerHTML = "Tool 3";
+    selectMenu.appendChild(item3)
+})
+
+let dropDown3 = document.querySelector(".drop-down-3");
+let whoWeAre = document.querySelector("#who-we-are")
+dropDown3.addEventListener("click", function(){
+    let selectMenu = document.createElement("div");
+    whoWeAre.appendChild(selectMenu);
+    selectMenu.classList.add("menu-3")
+    let item1 = document.createElement("p")
+    item1.innerHTML = "About us";
+    selectMenu.appendChild(item1)
+    let item2 = document.createElement("p")
+    item2.innerHTML = "Projects";
+    selectMenu.appendChild(item2)
+    let item3 = document.createElement("p")
+    item3.innerHTML = "Events";
+    selectMenu.appendChild(item3)
+    let item4 = document.createElement("p")
+    item4.innerHTML = "Contact us";
+    selectMenu.appendChild(item3);
+})
+
+
+
+let dropDown1Arrow = document.querySelector(".drop-down-1");
+let dropDownMenu1 = document.querySelector(".lang-drop-down")
+dropDown1Arrow.addEventListener("click", function(){
+    dropDownMenu1.classList.toggle("display")
+    console.log("hello")
+})
+
+let FAQtxt = [
+    {
+        txt3: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quam, nemo excepturi modi"
+    },
+    {
+        txt3: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nisi maxime vero maiores sunt voluptatum quisquam veniam mollitia aperiam suscipit perspiciatis non ex aspernatur aliquam, eos eligendi? Repellat, voluptatem aperiam."
+    },
+    {
+        txt3: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Nam nisi maxime vero maiores sunt voluptatum quisquam veniam"
+    },
+    {
+        txt3: "Nam nisi maxime vero maiores sunt voluptatum quisquam veniam voluptatum quisquam veniam"
+    },
+    {
+        txt3: "Nam nisi maxime vero maiores sunt voluptatum quisquam veniam voluptatum quisquam veniam"
+    },
+    {
+        txt3: "Nam nisi maxime vero maiores sunt voluptatum quisquam veniam voluptatum quisquam veniam"
+    }
+]
+
+let FAQDropDowns = document.querySelectorAll("#FAQ-cont div img");
+let FAQDiv = document.querySelectorAll("#FAQ-cont div");
+for (let i = 0; i < FAQDropDowns.length; i++){
+    FAQDropDowns[i].addEventListener("click", function(){
+        let FAQDescTxt = document.createElement("p");
+        FAQDescTxt.innerHTML = FAQtxt[i].txt3;
+        FAQDiv[i].appendChild(FAQDescTxt)
+    })
+}
+
+let contactPic = document.querySelectorAll("#contacts-cont div img");
+let contactPicBackground = document.querySelectorAll("#contacts-cont div")
+let contactsInfo = [
+    {
+        text1: "Jessie Williams promoted to chief of staff",
+        text2: "Oct. 29, 2019 at 6:06 a.m. ET"
+    },
+    {
+        text1: "Peter Ryan promoted to head of human resources",
+        text2: "Oct. 29, 2019 at 6:06 a.m. ET"
+    },
+    {
+        text1: "Rachel Stevens promoted to VP of sales",
+        text2: "Oct. 29, 2019 at 6:06 a.m. ET"
+    }
+]
+for (let i = 0; i < contactPic.length; i++) {
+    let PicText1 = document.createElement("p");
+    let PicText2 = document.createElement("p");
+    contactPicBackground[i].appendChild(PicText1);
+    contactPicBackground[i].appendChild(PicText2);
+    contactPic[i].addEventListener("mouseover", function () {
+        if (PicText1.innerText == "" && PicText2.innerText == "") {
+            PicText1.innerHTML = contactsInfo[i].text1
+            PicText2.innerHTML = contactsInfo[i].text2
+            contactPicBackground[i].style.backgroundColor = "white"
+            contactPicBackground[i].style.marginRight = "20px";
+        }
+    })
 }
