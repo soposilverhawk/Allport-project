@@ -172,6 +172,41 @@ for (let i = 0; i < FAQDropDowns.length; i++){
     })
 }
 
+let slider = document.querySelector(".slider");
+let sliderImgs = document.querySelectorAll(".slider img");
+let previousImg = document.querySelector("#slider-arrow-left");
+let nextImg = document.querySelector("#slider-arrow-right")
+
+let counter = 1;
+const size = sliderImgs[0].clientWidth;
+
+slider.style.transform = 'translateX(' + (-size * counter) + 'px)'
+
+previousImg.addEventListener("click", ()=>{
+    if(counter <= 0) return
+    slider.style.transition = "transform 0.4s ease-in-out";
+    counter--
+    slider.style.transform = 'translateX(' + (-size * counter * 1.5) + 'px)'
+})
+nextImg.addEventListener("click", ()=>{
+    if(counter >= sliderImgs.length - 1) return;
+    slider.style.transition = "transform 0.4s ease-in-out";
+    counter++
+    slider.style.transform = 'translateX(' + (-size * counter * 1.5) + 'px)'
+})
+slider.addEventListener("transitionend", ()=>{
+    if(sliderImgs[counter].id === "last-clone"){
+        slider.style.transition = "none";
+        counter = sliderImgs.length - 2;
+        slider.style.transform = 'translateX(' + (-size * counter * 1.5) + 'px)'
+    }
+    if(sliderImgs[counter].id === "first-clone"){
+        slider.style.transition = "none";
+        counter = sliderImgs.length - counter;
+        slider.style.transform = 'translateX(' + (-size * counter * 1.5) + 'px)'
+    }
+})
+
 let contactPic = document.querySelectorAll("#contacts-cont div img");
 let contactPicBackground = document.querySelectorAll("#contacts-cont div")
 let contactsInfo = [

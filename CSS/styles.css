@@ -131,7 +131,7 @@ input {
 }
 
 .left-cont {
-    width: 850px;
+    width: 100%;
     height: 550px;
     background-color: white;
     border-radius: 10px;
@@ -140,9 +140,10 @@ input {
     justify-content: space-between;
     padding-bottom: 10px;
     position: relative;
+    overflow: hidden;
 }
-.left-cont img {
-    width: 95%;
+.slider img {
+    width: 100%;
     height: 230px;
     margin: 18px auto;
 }
@@ -160,10 +161,14 @@ input {
     align-items: center;
     justify-content: space-between;
 }
+#starter-pic {
+    width: 150%;
+}
 #slider-arrows {
     width: 10%;
     margin-right: 28px;
     display: flex;
+    justify-content: space-between;
 }
 #slider-arrow-right, #slider-arrow-left {
     width: 10.66px;
@@ -338,9 +343,7 @@ input {
     margin: 0 auto;
     margin-top: 196px;
     display: flex;
-}
-#section-5 div {
-    width: 50%;
+    justify-content: space-evenly;
 }
 #section-5 div button {
     width: 130px;
@@ -352,6 +355,27 @@ input {
 }
 #section-5 div img {
     margin-top: 14px;
+}
+.S5-left-div {
+    width: 70%;
+    margin-left: 20px;
+}
+.S5-left-div img {
+    width: 98.5%;
+}
+.S5-right-div {
+    width: 30%;
+}
+.S5-right-div img {
+    width: 100%;
+    height: 222px;
+}
+.S5-right-div:hover {
+    width: 70%;
+    height: 500px;
+}
+.S5-left-div, .S5-right-div {
+    transition: all 0.5s
 }
 #section-5 div div {
     display: flex;
@@ -520,4 +544,8 @@ footer {
     position: absolute;
     bottom: 10px;
     left: 130px
+}
+.slider {
+    display: flex;
+    width: 200%;
 }
